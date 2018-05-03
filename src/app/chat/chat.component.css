@@ -1,0 +1,55 @@
+h1{
+    color: teal;
+}
+.example-container{
+  display:flex;
+  flex-direction: column;
+  margin-left: 0px;
+  margin-right: auto;
+  padding:100px;
+  background-image:url('/assets/test2.jpg');
+	border-color: blue;
+  max-height: 100%;
+}
+.example-container2{
+  max-width:360px;
+  display:flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 0px;
+  padding:40px;
+	border-color: blue;
+}
+
+.textarea{
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 25px;
+    overflow:auto;
+    max-height: 400px;
+    height: 180px;
+}
+.input{
+  display:flex;
+  background-color: white;
+  padding: 20px;
+  border-radius: 25px;
+
+}
+.menubtn{
+  background-color: white;
+}
+
+.example-full-width{
+  width: 100%;
+}
+.name{
+  text-align: right;
+}
+.number{
+  text-align: left;
+  color: gray;
+}
+ul li{
+  list-style: none;
+}

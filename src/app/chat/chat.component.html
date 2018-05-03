@@ -1,0 +1,55 @@
+
+<mat-sidenav-container class="example-con" >
+  <mat-sidenav #sidenav mode="side">
+    <div class="example-container2">
+      <mat-accordion>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <i class="material-icons">contacts</i>
+    </mat-panel-title>
+    <mat-panel-description>
+      contacs
+    </mat-panel-description>
+
+  </mat-expansion-panel-header>
+  <span class="name">Name</span> &nbsp;<span class="number">0711111111</span>
+</mat-expansion-panel>
+<mat-expansion-panel (opened)="panelOpenState = true"
+                     (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <i class="material-icons">group</i>
+    </mat-panel-title>
+    <mat-panel-description>
+      Groups
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <button mat-button color="primary"><i class="material-icons">group_add</i></button>
+</mat-expansion-panel>
+</mat-accordion>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="example-container">
+      <h1>{{title}}</h1>
+      <div class="menu">
+
+        <button mat-fab class="menubtn" (click)="sidenav.toggle()"><i class="material-icons">menu</i></button>
+      </div>
+        <div class="textarea">
+          <ul><li *ngFor="let themsg of msg"><br/><span style="color: grey;">Name </span>{{themsg}}</li></ul>
+        </div>
+
+      <br/>
+    <div class="input">
+      <mat-form-field  class="example-full-width">
+        <input matInput placeholder="enter message" #themsg (keyup.enter)="sendMsg(themsg.value)">
+      </mat-form-field>
+    <button mat-fab (click)="sendMsg(themsg.value)" style="margin-left: 15px;"><i class="material-icons">send</i></button>
+  </div><br/>
+    <button class="menubtn" mat-button (click)="logOut()" style="width: 70px;">Logout</button>
+  </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

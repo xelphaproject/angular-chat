@@ -1,0 +1,17 @@
+<div class="example-container">
+  <div class="text-danger" *ngIf="errMsg !== ''">
+      {{errMsg}}
+  </div><br/>
+  <mat-form-field >
+    <input  matInput #uname placeholder="Username">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput #pass placeholder="Password">
+  </mat-form-field>
+<button mat-raised-button (click)=validateInput(uname.value,pass.value)>Login</button>
+<br/>
+<nav>
+  <p>Not registered? <a routerLink="/register">Join us</a></p>
+</nav>
+
+</div>
